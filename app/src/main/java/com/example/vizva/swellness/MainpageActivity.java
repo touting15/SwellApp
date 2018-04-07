@@ -1,5 +1,6 @@
 package com.example.vizva.swellness;
 
+import android.support.design.widget.BottomNavigationView;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
@@ -29,5 +30,7 @@ public class MainpageActivity extends AppCompatActivity {
         RVAdapter adapter = new RVAdapter(suggestions);
         recyclerView.setAdapter(adapter);
 
+        BottomNavigationView bottomNavigationView = (BottomNavigationView) findViewById(R.id.bottom_navigation);
+        BottomNavigationViewHelper.disableShiftMode(bottomNavigationView);
     }
 }
