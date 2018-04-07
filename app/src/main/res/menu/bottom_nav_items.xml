@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/fitness"
+        android:title="@string/menu_fitness"
+        android:icon="@drawable/ic_lock"
+        />
+    <item
+        android:id="@+id/diet"
+        android:title="@string/menu_diet"
+        android:icon="@drawable/ic_lock"
+        />
+    <item
+        android:id="@+id/menu_home"
+        android:title="@string/menu_home"
+        android:icon="@drawable/ic_lock"
+        />
+    <item
+        android:id="@+id/meditation"
+        android:title="@string/menu_meditation"
+        android:icon="@drawable/ic_lock" />
+    <item
+        android:id="@+id/sleep"
+        android:title="@string/menu_sleep"
+        android:icon="@drawable/ic_lock"
+        />
+</menu>
