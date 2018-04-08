@@ -1,11 +1,14 @@
 package com.example.vizva.swellness;
 
+import android.content.Context;
+import android.content.Intent;
 import android.support.v7.widget.CardView;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import java.util.List;
@@ -13,7 +16,7 @@ import java.util.List;
 public class RVAdapter extends RecyclerView.Adapter<RVAdapter.SuggestionViewHolder> {
 
     public static class SuggestionViewHolder extends RecyclerView.ViewHolder {
-
+       // RelativeLayout layout;
         CardView cv;
         ImageView vimage;
         ImageView vstar;
@@ -22,6 +25,7 @@ public class RVAdapter extends RecyclerView.Adapter<RVAdapter.SuggestionViewHold
 
         public SuggestionViewHolder(View v) {
             super(v);
+           // layout = v.findViewById()
             cv = (CardView)v.findViewById(R.id.card_view);
             vimage =  (ImageView) v.findViewById(R.id.imageView);
             vstar = (ImageView)  v.findViewById(R.id.star);
@@ -31,8 +35,10 @@ public class RVAdapter extends RecyclerView.Adapter<RVAdapter.SuggestionViewHold
     }
 
     List<Suggestion> suggestions;
+    Context context;
 
-    public RVAdapter(List<Suggestion> suggestions) {
+    public RVAdapter(Context context, List<Suggestion> suggestions) {
+        this.context = context;
         this.suggestions = suggestions;
     }
 
@@ -42,12 +48,21 @@ public class RVAdapter extends RecyclerView.Adapter<RVAdapter.SuggestionViewHold
     }
 
     @Override
-    public void onBindViewHolder(SuggestionViewHolder suggestionViewHolder, int i) {
+    public void onBindViewHolder(SuggestionViewHolder suggestionViewHolder, final int i) {
 
         suggestionViewHolder.vimage.setImageResource(suggestions.get(i).photoId);
         suggestionViewHolder.vstar.setImageResource(R.drawable.ic_lock);
         suggestionViewHolder.vTitle.setText(suggestions.get(i).title);
         suggestionViewHolder.vSubtitle.setText(suggestions.get(i).subtitle);
+
+        suggestionViewHolder.cv.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(context, SuggestionActivity.class);
+                intent.putExtra("sugesstion", suggestions.get(i).title);
+                context.startActivity(intent);
+            }
+        });
     }
 
     @Override
