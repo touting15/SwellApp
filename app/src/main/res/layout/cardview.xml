@@ -12,7 +12,8 @@
         android:layout_height="match_parent"
         card_view:cardCornerRadius="10dp"
         android:layout_margin="5dp"
-        card_view:cardElevation="6dp">
+        card_view:cardElevation="6dp"
+        >
 
 
         <RelativeLayout
@@ -24,7 +25,7 @@
                 android:layout_width="100dp"
                 android:layout_height="100dp"
                 android:layout_weight="1"/>
-
+<!--This image is set under the RV adapter-->
             <ImageView
                 android:id="@+id/star"
                 android:layout_width="32dp"

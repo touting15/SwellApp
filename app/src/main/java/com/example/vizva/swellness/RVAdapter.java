@@ -59,7 +59,10 @@ public class RVAdapter extends RecyclerView.Adapter<RVAdapter.SuggestionViewHold
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(context, SuggestionActivity.class);
-                intent.putExtra("sugesstion", suggestions.get(i).title);
+                //The activity_suggestions page has a textview and image view
+                intent.putExtra("image",suggestions.get(i).photoId);
+                intent.putExtra("title", suggestions.get(i).title);
+
                 context.startActivity(intent);
             }
         });

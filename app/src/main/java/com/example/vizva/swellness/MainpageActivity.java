@@ -9,6 +9,7 @@ import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import java.util.ArrayList;
@@ -20,7 +21,7 @@ public class MainpageActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_mainpage);
-        RecyclerView recyclerView = (RecyclerView)findViewById(R.id.rv);
+        RecyclerView recyclerView = (RecyclerView) findViewById(R.id.rv);
         LinearLayoutManager llm = new LinearLayoutManager(this);
         recyclerView.setLayoutManager(llm);
 //Creates the suggestions to be made into cards.  Change the dumbbell images
@@ -47,7 +48,7 @@ public class MainpageActivity extends AppCompatActivity {
         bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
-                switch(item.getItemId()) {
+                switch (item.getItemId()) {
                     case R.id.fitness:
                         Intent intent = new Intent(MainpageActivity.this, FitnessActivity.class);
                         startActivity(intent);
@@ -74,19 +75,6 @@ public class MainpageActivity extends AppCompatActivity {
                 return false;
             }
         });
-//make cards clickables
-        getIncomingIntent();
 
-    }
-
-    //Clickable cards, corresponds to RVAdapter intentExtra
-    private void getIncomingIntent(){
-        if(getIntent().hasExtra("suggestion")){
-            String suggestion_title = getIntent().getStringExtra("suggestion");
-            // TextView textview = findViewById(R.id.suggestion_page);
-            // textView.setText(suggestion_title)
-            //
-            //
-        }
     }
 }

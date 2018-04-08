@@ -16,7 +16,10 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:id="@+id/rv"
-            android:layout_marginBottom="?attr/actionBarSize">
+            android:layout_marginBottom="?attr/actionBarSize"
+            android:layout_marginRight="5dp"
+            android:layout_marginLeft="5dp"
+            android:scrollbars="vertical">
 
         </android.support.v7.widget.RecyclerView>
     <!-- Used to be design:menu, instead of app:menu, but it wouldn't work-->
