@@ -7,6 +7,23 @@
     tools:context="com.example.vizva.swellness.FitnessActivity"
     xmlns:design="http://schemas.android.com/apk/res-auto">
 
+    <ImageView
+
+        android:id="@+id/fitness_image"
+        android:layout_width="287dp"
+        android:layout_height="382dp"
+        android:layout_below="@+id/fitness_title"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:id="@+id/fitness_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:textSize="30sp" />
+
+    <!--
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
@@ -26,6 +43,8 @@
             android:textSize="30sp"/>
 
     </RelativeLayout>
+    -->
+
 
     <RelativeLayout
         android:id="@+id/bottomBar"

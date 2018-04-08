@@ -7,6 +7,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 public class FitnessActivity extends AppCompatActivity {
@@ -17,6 +18,9 @@ public class FitnessActivity extends AppCompatActivity {
         setContentView(R.layout.activity_fitness);
         TextView textView = (TextView) findViewById(R.id.fitness_title);
         textView.setText("Fitness Page");
+//insert fitness page here
+        ImageView imageView = (ImageView) findViewById(R.id.fitness_image);
+        imageView.setImageResource(R.drawable.ic_swellness);
 
         BottomNavigationView bottomNavigationView = (BottomNavigationView) findViewById(R.id.bottom_navigation);
         BottomNavigationViewHelper.disableShiftMode(bottomNavigationView);

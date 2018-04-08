@@ -7,17 +7,34 @@
     tools:context="com.example.vizva.swellness.FitnessActivity"
     xmlns:design="http://schemas.android.com/apk/res-auto">
 
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
 
-       <!-- <android.support.v7.widget.RecyclerView
+    <ImageView
+
+        android:id="@+id/sleep_image"
+        android:layout_width="287dp"
+        android:layout_height="382dp"
+        android:layout_below="@+id/sleep_title"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:id="@+id/sleep_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:textSize="30sp" />
+
+    <!--
+        <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:id="@+id/rv"
-            android:layout_marginBottom="?attr/actionBarSize">
+            android:layout_height="match_paren
+            <android.support.v7.widget.RecyclerView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/rv"
+                android:layout_marginBottom="?attr/actionBarSize">
 
-        </android.support.v7.widget.RecyclerView> -->
+            </android.support.v7.widget.RecyclerView>
 
         <TextView
             android:layout_width="match_parent"
@@ -26,7 +43,7 @@
             android:textSize="30sp"/>
 
     </RelativeLayout>
-
+    -->
     <RelativeLayout
         android:id="@+id/bottomBar"
         android:layout_width="match_parent"

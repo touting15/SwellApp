@@ -7,6 +7,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 public class DietActivity extends AppCompatActivity {
@@ -18,6 +19,9 @@ public class DietActivity extends AppCompatActivity {
 //simple text
         TextView textView = (TextView) findViewById(R.id.diet_title);
         textView.setText("Diet Page");
+//input screenshot of diet page
+       ImageView imageView = (ImageView) findViewById(R.id.diet_image);
+        imageView.setImageResource(R.drawable.ic_swellness);
 
         BottomNavigationView bottomNavigationView = (BottomNavigationView) findViewById(R.id.bottom_navigation);
         BottomNavigationViewHelper.disableShiftMode(bottomNavigationView);

@@ -7,6 +7,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 public class MeditationActivity extends AppCompatActivity {
@@ -18,6 +19,10 @@ public class MeditationActivity extends AppCompatActivity {
         //Simple text
         TextView textView = (TextView) findViewById(R.id.meditation_title);
         textView.setText("Meditation Page");
+
+        //input screenshot of diet page
+         ImageView imageView = (ImageView) findViewById(R.id.meditation_image);
+         imageView.setImageResource(R.drawable.ic_swellness);
 
         BottomNavigationView bottomNavigationView = (BottomNavigationView) findViewById(R.id.bottom_navigation);
         BottomNavigationViewHelper.disableShiftMode(bottomNavigationView);
