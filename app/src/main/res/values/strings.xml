@@ -1,5 +1,7 @@
 <resources>
     <string name="app_name">Swellness</string>
+    <!--For menu botton on action bar-->
+    <string name="menu_title">Menu</string>
     <!--For the bottom navigation bar-->
     <string name="menu_home">Home</string>
     <string name="menu_fitness">Fitness</string>

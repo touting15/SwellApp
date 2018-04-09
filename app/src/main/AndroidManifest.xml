@@ -21,7 +21,22 @@
         <activity android:name=".DietActivity" />
         <activity android:name=".SleepActivity" />
         <activity android:name=".MeditationActivity" />
-        <activity android:name=".SuggestionActivity"></activity>
+        <activity android:name=".SuggestionActivity" />
+        <activity
+            android:name=".MenuActivity"
+            android:label="Swellness Menu"
+            android:parentActivityName=".MainpageActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".MainpageActivity" />
+        </activity>
+        <activity
+            android:name=".ProfileActivity"
+            android:label="Swellness Profile" />
+        <activity android:name=".FavoritesActivity" />
+        <activity android:name=".SettingActivity" />
+        <activity android:name=".HelpActivity" />
+        <activity android:name=".ContactActivity"></activity>
     </application>
 
 </manifest>
