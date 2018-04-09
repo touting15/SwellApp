@@ -5,10 +5,15 @@ import android.support.annotation.NonNull;
 import android.support.design.widget.BottomNavigationView;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.RecyclerView;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.ImageView;
 import android.widget.TextView;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class FitnessActivity extends AppCompatActivity {
 
@@ -16,11 +21,27 @@ public class FitnessActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_fitness);
-        TextView textView = (TextView) findViewById(R.id.fitness_title);
-        textView.setText("Fitness Page");
+
 //insert fitness page here
-        ImageView imageView = (ImageView) findViewById(R.id.fitness_image);
-        imageView.setImageResource(R.drawable.ic_swellness);
+        //ImageView imageView = (ImageView) findViewById(R.id.fitness_image);
+        //imageView.setImageResource(R.drawable.ic_swellness);
+        RecyclerView recyclerView = (RecyclerView) findViewById(R.id.rv);
+        LinearLayoutManager llm = new LinearLayoutManager(this);
+        recyclerView.setLayoutManager(llm);
+
+        List<Suggestion> fitness_suggestions = new ArrayList<>();
+        fitness_suggestions.add(new Suggestion("It's Beautiful... Let's Go For a Run", "Learn more about the benefits of cardio", R.drawable.ic_lock));
+        fitness_suggestions.add(new Suggestion("Stay Hydrated", "It's easy to forget to drink enough water", R.drawable.ic_lock));
+        fitness_suggestions.add(new Suggestion("Are you feeling pumped?", "Try taking the stairs today. Take little steps to reach your goal", R.drawable.ic_lock));
+        fitness_suggestions.add(new Suggestion("Want to check out this 5K this weekend?", "5K are great opportunities to be active, be social, and help a cause.  You can't lose.", R.drawable.ic_lock));
+        fitness_suggestions.add(new Suggestion("New Exercise Alert!", "These arm exercises are quick and simple.  No equipment or weight needed.  See for yourself. ", R.drawable.ic_lock));
+        fitness_suggestions.add(new Suggestion("Have you tried out yoga? Seems pretty cool.", "Yoga is wonderful for your muscles and your mind.", R.drawable.ic_lock));
+        fitness_suggestions.add(new Suggestion("You have been sitting for a long while.", "Take some breaks and stretch your legs", R.drawable.ic_lock));
+
+        RVAdapter adapter = new RVAdapter(this, fitness_suggestions);
+        recyclerView.setAdapter(adapter);
+
+
 
         BottomNavigationView bottomNavigationView = (BottomNavigationView) findViewById(R.id.bottom_navigation);
         BottomNavigationViewHelper.disableShiftMode(bottomNavigationView);
