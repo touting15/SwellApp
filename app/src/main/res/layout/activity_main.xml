@@ -26,28 +26,28 @@
         android:layout_marginTop="30dp"
         />
 
-<ScrollView
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    >
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true">
 
-     <LinearLayout
-         android:id="@+id/textbox"
-         android:layout_width="match_parent"
-         android:layout_height="wrap_content"
-         android:orientation="vertical"
-         android:background="@drawable/trans_white_rectangle"
-         android:layout_marginEnd="30dp"
-         android:layout_marginStart="30dp"
-         android:paddingBottom="15dp"
-         android:paddingTop="15dp"
-         android:paddingRight="5dp"
-         android:layout_gravity="center"
-         >
-         <!--<TextView-->
-             <!--android:paddingStart="15dp"-->
-             <!--android:paddingLeft="15dp"-->
-             <!--android:paddingBottom="15dp"-->
+        <LinearLayout
+            android:id="@+id/textbox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginEnd="30dp"
+            android:layout_marginStart="30dp"
+            android:background="@drawable/trans_white_rectangle"
+            android:orientation="vertical"
+            android:paddingBottom="15dp"
+            android:paddingRight="5dp"
+            android:paddingTop="15dp">
+            <!--<TextView-->
+            <!--android:paddingStart="15dp"-->
+            <!--android:paddingLeft="15dp"-->
+            <!--android:paddingBottom="15dp"-->
             <!--android:layout_width="match_parent"-->
             <!--android:layout_height="wrap_content"-->
             <!--android:text="GET SWELLL!!!"-->
@@ -55,79 +55,77 @@
             <!--android:textSize="30sp"-->
             <!--android:textStyle="bold"-->
             <!--android:layout_marginBottom="5dp"-->
-        <!--/>-->
+            <!--/>-->
 
-         <AutoCompleteTextView
-             android:id="@+id/userName"
-             android:layout_height="40dp"
-             android:layout_width="match_parent"
-             android:hint="Username"
-             android:background="@drawable/rounded_white"
-             android:layout_marginEnd="15dp"
-             android:layout_marginStart="15dp"
-             android:drawableLeft="@drawable/ic_person"
-             android:drawablePadding="10dp"
-             android:paddingStart="10dp"
-             android:paddingLeft="15dp"
-             android:paddingBottom="5dp"
-             android:layout_marginBottom="10dp"
-             />
-         <AutoCompleteTextView
-             android:id="@+id/userPassword"
-             android:layout_height="40dp"
-             android:layout_width="match_parent"
-             android:hint="Password"
-             android:background="@drawable/rounded_white"
-             android:layout_marginEnd="15dp"
-             android:layout_marginStart="15dp"
-             android:drawableLeft="@drawable/ic_lock"
-             android:drawablePadding="10dp"
-             android:paddingStart="10dp"
-             android:paddingLeft="15dp"
-             android:paddingBottom="5dp"
-             android:layout_marginBottom='5dp'
-             android:inputType="textPassword"
-             />
+            <AutoCompleteTextView
+                android:id="@+id/userName"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginBottom="10dp"
+                android:layout_marginEnd="15dp"
+                android:layout_marginStart="15dp"
+                android:background="@drawable/rounded_white"
+                android:drawableLeft="@drawable/ic_person"
+                android:drawablePadding="10dp"
+                android:hint="Username"
+                android:paddingBottom="5dp"
+                android:paddingLeft="15dp"
+                android:paddingStart="10dp" />
 
-         <LinearLayout
-             android:id="@+id/linear_layout"
-             android:layout_width="match_parent"
-             android:layout_height="wrap_content"
-             android:orientation="horizontal"
-             >
+            <AutoCompleteTextView
+                android:id="@+id/userPassword"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginBottom='5dp'
+                android:layout_marginEnd="15dp"
+                android:layout_marginStart="15dp"
+                android:background="@drawable/rounded_white"
+                android:drawableLeft="@drawable/ic_lock"
+                android:drawablePadding="10dp"
+                android:hint="Password"
+                android:inputType="textPassword"
+                android:paddingBottom="5dp"
+                android:paddingLeft="15dp"
+                android:paddingStart="10dp" />
+
+            <LinearLayout
+                android:id="@+id/linear_layout"
+                android:layout_width="match_parent"
+                android:layout_height="41dp"
+                android:orientation="horizontal">
 
 
-             <Button
-                 android:id="@+id/newUser"
-                 android:layout_width="wrap_content"
-                 android:layout_height="30dp"
-                 android:layout_marginLeft="10dp"
-                 android:layout_marginRight="125dp"
-                 android:layout_marginTop="10dp"
-                 android:background="@drawable/register_button"
-                 android:text="New User"
-                 android:textColor="@color/white"
-                 android:textStyle="normal"
-                 android:textSize="12dp"
+                <Button
+                    android:id="@+id/newUser"
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="125dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/register_button"
+                    android:text="New User"
+                    android:textColor="@color/white"
+                    android:textSize="12dp"
+                    android:textStyle="normal"
 
 
-                 />
+                    />
 
-             <Button
-                 android:id="@+id/forgot"
-                 android:layout_width="wrap_content"
-                 android:layout_height="30dp"
-                 android:background="@drawable/register_button"
-                 android:text="FORGOT USER"
-                 android:textSize="12dp"
-                 android:textColor="@color/white"
-                 android:textStyle="normal"
-                 android:layout_marginTop="10dp"
+                <Button
+                    android:id="@+id/forgot"
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/register_button"
+                    android:text="Password??"
+                    android:textColor="@color/white"
+                    android:textSize="12dp"
+                    android:textStyle="normal"
 
 
-                 />
-         </LinearLayout>
-     </LinearLayout>
+                    />
+            </LinearLayout>
+        </LinearLayout>
 
     </ScrollView>
 
