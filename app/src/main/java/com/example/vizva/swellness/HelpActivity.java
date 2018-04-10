@@ -10,8 +10,5 @@ public class HelpActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_help);
-
-        TextView menuPageTextView = (TextView) findViewById(R.id.helpTextView);
-        menuPageTextView.setText("You are on the help page which is under construction");
     }
 }

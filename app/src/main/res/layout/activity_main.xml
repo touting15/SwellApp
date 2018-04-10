@@ -117,7 +117,7 @@
                     android:layout_height="30dp"
                     android:layout_marginTop="10dp"
                     android:background="@drawable/register_button"
-                    android:text="Password??"
+                    android:text="Password?"
                     android:textColor="@color/white"
                     android:textSize="12dp"
                     android:textStyle="normal"
