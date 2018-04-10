@@ -25,6 +25,8 @@ public class DietActivity extends AppCompatActivity {
 
         BottomNavigationView bottomNavigationView = (BottomNavigationView) findViewById(R.id.bottom_navigation);
         BottomNavigationViewHelper.disableShiftMode(bottomNavigationView);
+        //this shows the meditation icon correctly
+        bottomNavigationView.setItemIconTintList(null);
 //Sets the diet icon to selected
         Menu menu = bottomNavigationView.getMenu();
         MenuItem menuItem = menu.getItem(1);

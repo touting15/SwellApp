@@ -27,6 +27,8 @@ public class SleepActivity extends AppCompatActivity {
 
         BottomNavigationView bottomNavigationView = (BottomNavigationView) findViewById(R.id.bottom_navigation);
         BottomNavigationViewHelper.disableShiftMode(bottomNavigationView);
+        //this shows the meditation icon correctly
+        bottomNavigationView.setItemIconTintList(null);
 //Sets sleep icon to selected
         Menu menu = bottomNavigationView.getMenu();
         MenuItem menuItem = menu.getItem(4);
