@@ -51,7 +51,7 @@ public class RVAdapter extends RecyclerView.Adapter<RVAdapter.SuggestionViewHold
     public void onBindViewHolder(SuggestionViewHolder suggestionViewHolder, final int i) {
 
         suggestionViewHolder.vimage.setImageResource(suggestions.get(i).photoId);
-        suggestionViewHolder.vstar.setImageResource(R.drawable.ic_lock);
+        suggestionViewHolder.vstar.setImageResource(R.drawable.ic_star);
         suggestionViewHolder.vTitle.setText(suggestions.get(i).title);
         suggestionViewHolder.vSubtitle.setText(suggestions.get(i).subtitle);
 

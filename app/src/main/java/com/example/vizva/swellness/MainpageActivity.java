@@ -26,19 +26,25 @@ public class MainpageActivity extends AppCompatActivity {
         recyclerView.setLayoutManager(llm);
 //Creates the suggestions to be made into cards.  Change the dumbbell images
         List<Suggestion> suggestions = new ArrayList<>();
-        suggestions.add(new Suggestion("It's Beautiful... Let's Go For a Run", "Learn more about the benefits of cardio", R.drawable.ic_lock));
-        suggestions.add(new Suggestion("Stay Hydrated", "It's easy to forget to drink enough water", R.drawable.ic_lock));
-        suggestions.add(new Suggestion("Let's Check out the Carnival Today", "This event is happening near you. Hooray!", R.drawable.ic_lock));
-        suggestions.add(new Suggestion("You Miss 100% of the Shots You Don't Take", "Some insipration", R.drawable.ic_lock));
-        suggestions.add(new Suggestion("Here's a Playlist to Help you Chill Out", "Stress affects your mood, sleep, and overall well-being.  Listening to music can help reduce stress.", R.drawable.ic_lock));
-        suggestions.add(new Suggestion("How are you sleeping?", "Losing even a little bit of sleep can be detrimental to your health.  Check out these relaxing tips to help you snooze.", R.drawable.ic_lock));
+        suggestions.add(new Suggestion("It's Beautiful... Let's Go For a Run", "Learn more about the benefits of cardio", R.drawable.sun));
+        suggestions.add(new Suggestion("Stay Hydrated", "It's easy to forget to drink enough water", R.drawable.waterbottle));
+        suggestions.add(new Suggestion("Let's Check out the Carnival Today", "This event is happening near you. Hooray!", R.drawable.upcoming_event));
+        suggestions.add(new Suggestion("You Miss 100% of the Shots You Don't Take", "Some insipration", R.drawable.basketball));
+        suggestions.add(new Suggestion("Here's a Playlist to Help you Chill Out", "Stress affects your mood, sleep, and overall well-being.  Listening to music can help reduce stress.", R.drawable.play));
+        suggestions.add(new Suggestion("How are you sleeping?", "Losing even a little bit of sleep can be detrimental to your health.  Check out these relaxing tips to help you snooze.", R.drawable.snooze));
+        suggestions.add(new Suggestion("Are you feeling pumped?", "Try taking the stairs today. Take little steps to reach your goal", R.drawable.stairs));
+        suggestions.add(new Suggestion("Want to check out this 5K this weekend?", "5K are great opportunities to be active, be social, and help a cause.  You can't lose.", R.drawable.shoes));
+        suggestions.add(new Suggestion("New Exercise Alert!", "These arm exercises are quick and simple.  No equipment or weight needed.  See for yourself. ", R.drawable.arm));
+        suggestions.add(new Suggestion("Have you tried out yoga? Seems pretty cool.", "Yoga is wonderful for your muscles and your mind.", R.drawable.yoga));
+        suggestions.add(new Suggestion("You have been sitting for a long while.", "Take some breaks and stretch your legs", R.drawable.walk));
 
         RVAdapter adapter = new RVAdapter(this, suggestions);
         recyclerView.setAdapter(adapter);
 
         BottomNavigationView bottomNavigationView = (BottomNavigationView) findViewById(R.id.bottom_navigation);
         BottomNavigationViewHelper.disableShiftMode(bottomNavigationView);
-
+        //this shows the meditation icon correctly
+        bottomNavigationView.setItemIconTintList(null);
 
         //sets the home icon to selected
         Menu menu = bottomNavigationView.getMenu();

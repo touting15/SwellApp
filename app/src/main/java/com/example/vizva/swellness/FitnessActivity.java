@@ -30,13 +30,13 @@ public class FitnessActivity extends AppCompatActivity {
         recyclerView.setLayoutManager(llm);
 
         List<Suggestion> fitness_suggestions = new ArrayList<>();
-        fitness_suggestions.add(new Suggestion("It's Beautiful... Let's Go For a Run", "Learn more about the benefits of cardio", R.drawable.ic_lock));
-        fitness_suggestions.add(new Suggestion("Stay Hydrated", "It's easy to forget to drink enough water", R.drawable.ic_lock));
-        fitness_suggestions.add(new Suggestion("Are you feeling pumped?", "Try taking the stairs today. Take little steps to reach your goal", R.drawable.ic_lock));
-        fitness_suggestions.add(new Suggestion("Want to check out this 5K this weekend?", "5K are great opportunities to be active, be social, and help a cause.  You can't lose.", R.drawable.ic_lock));
-        fitness_suggestions.add(new Suggestion("New Exercise Alert!", "These arm exercises are quick and simple.  No equipment or weight needed.  See for yourself. ", R.drawable.ic_lock));
-        fitness_suggestions.add(new Suggestion("Have you tried out yoga? Seems pretty cool.", "Yoga is wonderful for your muscles and your mind.", R.drawable.ic_lock));
-        fitness_suggestions.add(new Suggestion("You have been sitting for a long while.", "Take some breaks and stretch your legs", R.drawable.ic_lock));
+        fitness_suggestions.add(new Suggestion("It's Beautiful... Let's Go For a Run", "Learn more about the benefits of cardio", R.drawable.sun));
+        fitness_suggestions.add(new Suggestion("Stay Hydrated", "It's easy to forget to drink enough water", R.drawable.waterbottle));
+        fitness_suggestions.add(new Suggestion("Are you feeling pumped?", "Try taking the stairs today. Take little steps to reach your goal", R.drawable.stairs));
+        fitness_suggestions.add(new Suggestion("Want to check out this 5K this weekend?", "5K are great opportunities to be active, be social, and help a cause.  You can't lose.", R.drawable.shoes));
+        fitness_suggestions.add(new Suggestion("New Exercise Alert!", "These arm exercises are quick and simple.  No equipment or weight needed.  See for yourself. ", R.drawable.arm));
+        fitness_suggestions.add(new Suggestion("Have you tried out yoga? Seems pretty cool.", "Yoga is wonderful for your muscles and your mind.", R.drawable.yoga));
+        fitness_suggestions.add(new Suggestion("You have been sitting for a long while.", "Take some breaks and stretch your legs", R.drawable.walk));
 
         RVAdapter adapter = new RVAdapter(this, fitness_suggestions);
         recyclerView.setAdapter(adapter);
@@ -45,6 +45,8 @@ public class FitnessActivity extends AppCompatActivity {
 
         BottomNavigationView bottomNavigationView = (BottomNavigationView) findViewById(R.id.bottom_navigation);
         BottomNavigationViewHelper.disableShiftMode(bottomNavigationView);
+        //this shows the meditation icon correctly
+        bottomNavigationView.setItemIconTintList(null);
 //sets the fitness icon to selected
         Menu menu = bottomNavigationView.getMenu();
         MenuItem menuItem = menu.getItem(0);
