@@ -22,6 +22,7 @@ public class RVAdapter extends RecyclerView.Adapter<RVAdapter.SuggestionViewHold
         ImageView vstar;
         TextView vTitle;
         TextView vSubtitle;
+        TextView vXp;
 
         public SuggestionViewHolder(View v) {
             super(v);
@@ -31,6 +32,7 @@ public class RVAdapter extends RecyclerView.Adapter<RVAdapter.SuggestionViewHold
             vstar = (ImageView)  v.findViewById(R.id.star);
             vTitle = (TextView)  v.findViewById(R.id.textView);
             vSubtitle = (TextView) v.findViewById(R.id.textView2);
+            vXp = (TextView) v.findViewById(R.id.xp);
         }
     }
 
@@ -54,6 +56,7 @@ public class RVAdapter extends RecyclerView.Adapter<RVAdapter.SuggestionViewHold
         suggestionViewHolder.vstar.setImageResource(R.drawable.ic_star);
         suggestionViewHolder.vTitle.setText(suggestions.get(i).title);
         suggestionViewHolder.vSubtitle.setText(suggestions.get(i).subtitle);
+        suggestionViewHolder.vXp.setText(suggestions.get(i).xp);
 
         suggestionViewHolder.cv.setOnClickListener(new View.OnClickListener() {
             @Override
