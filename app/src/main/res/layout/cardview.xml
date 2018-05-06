@@ -54,21 +54,25 @@
 
             <TextView
                 android:id="@+id/xp"
-                android:layout_width="72dp"
-                android:layout_height="17dp"
-                android:layout_alignBottom="@+id/imageView"
-                android:layout_alignParentEnd="true"
-                android:layout_marginBottom="1dp"
-                android:layout_marginEnd="202dp"
-                android:layout_toEndOf="@id/imageView"
-                android:text="TextView" />
-
-            <CheckBox
-                android:id="@+id/checkBox"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignBottom="@+id/imageView"
-                android:layout_alignParentEnd="true" />
+                android:layout_alignParentEnd="true"
+                android:layout_marginBottom="1dp"
+                android:layout_marginEnd="185dp"
+                android:layout_toEndOf="@id/imageView"
+                android:text="TextView" />
+
+            <Button
+                android:id="@+id/completed"
+                android:layout_width="wrap_content"
+                android:layout_height="28dp"
+                android:layout_alignBottom="@+id/imageView"
+                android:layout_alignParentEnd="true"
+                android:background="@drawable/register_button"
+                android:text="Completed"
+                android:textColor="@color/white" />
+
         </RelativeLayout>
     </android.support.v7.widget.CardView>
 </LinearLayout>

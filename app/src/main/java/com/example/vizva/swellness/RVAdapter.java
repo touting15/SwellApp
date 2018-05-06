@@ -7,11 +7,11 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.CheckBox;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
+import android.widget.Button;
 
 import java.util.List;
 
@@ -25,7 +25,7 @@ public class RVAdapter extends RecyclerView.Adapter<RVAdapter.SuggestionViewHold
         TextView vTitle;
         TextView vSubtitle;
         TextView vXp;
-        CheckBox vCheckbox;
+        Button vCompleted;
 
         public SuggestionViewHolder(View v) {
             super(v);
@@ -36,7 +36,7 @@ public class RVAdapter extends RecyclerView.Adapter<RVAdapter.SuggestionViewHold
             vTitle = (TextView)  v.findViewById(R.id.textView);
             vSubtitle = (TextView) v.findViewById(R.id.textView2);
             vXp = (TextView) v.findViewById(R.id.xp);
-            vCheckbox = (CheckBox) v.findViewById(R.id.checkBox);
+            vCompleted = (Button) v.findViewById(R.id.completed);
         }
     }
 
@@ -87,15 +87,14 @@ public class RVAdapter extends RecyclerView.Adapter<RVAdapter.SuggestionViewHold
 
             }
         });
-        suggestionViewHolder.vCheckbox.setOnClickListener(new View.OnClickListener(){
+        suggestionViewHolder.vCompleted.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View view){
-                if (suggestionViewHolder.vCheckbox.isChecked()){
                     //add toast to say completed
-                    Toast.makeText(context,"Activity Completed", Toast.LENGTH_SHORT).show();
+                Toast.makeText(context,"Activity Completed", Toast.LENGTH_SHORT).show();
                     //remove from list
-                    removeItem(i);
-                }
+                removeItem(i);
+
             }
         });
     }
