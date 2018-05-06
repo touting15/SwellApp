@@ -7,9 +7,11 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.CheckBox;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.util.List;
 
@@ -23,6 +25,7 @@ public class RVAdapter extends RecyclerView.Adapter<RVAdapter.SuggestionViewHold
         TextView vTitle;
         TextView vSubtitle;
         TextView vXp;
+        CheckBox vCheckbox;
 
         public SuggestionViewHolder(View v) {
             super(v);
@@ -33,6 +36,7 @@ public class RVAdapter extends RecyclerView.Adapter<RVAdapter.SuggestionViewHold
             vTitle = (TextView)  v.findViewById(R.id.textView);
             vSubtitle = (TextView) v.findViewById(R.id.textView2);
             vXp = (TextView) v.findViewById(R.id.xp);
+            vCheckbox = (CheckBox) v.findViewById(R.id.checkBox);
         }
     }
 
@@ -49,8 +53,14 @@ public class RVAdapter extends RecyclerView.Adapter<RVAdapter.SuggestionViewHold
         return suggestions.size();
     }
 
+    public void removeItem(int position){
+        suggestions.remove(position);
+        notifyItemRemoved(position);
+        notifyItemRangeChanged(position, getItemCount());
+        //notifyDataSetChanged();
+    }
     @Override
-    public void onBindViewHolder(SuggestionViewHolder suggestionViewHolder, final int i) {
+    public void onBindViewHolder(final SuggestionViewHolder suggestionViewHolder, final int i) {
 
         suggestionViewHolder.vimage.setImageResource(suggestions.get(i).photoId);
         suggestionViewHolder.vstar.setImageResource(R.drawable.ic_star);
@@ -67,6 +77,17 @@ public class RVAdapter extends RecyclerView.Adapter<RVAdapter.SuggestionViewHold
                 intent.putExtra("title", suggestions.get(i).title);
 
                 context.startActivity(intent);
+            }
+        });
+        suggestionViewHolder.vCheckbox.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View view){
+                if (suggestionViewHolder.vCheckbox.isChecked()){
+                    //add toast to say completed
+                    Toast.makeText(context,"Activity Completed", Toast.LENGTH_SHORT).show();
+                    //remove from list
+                    removeItem(i);
+                }
             }
         });
     }
