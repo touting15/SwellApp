@@ -8,4 +8,5 @@
     <string name="menu_meditation">Meditation</string>
     <string name="menu_diet">Diet</string>
     <string name="menu_sleep">Sleep</string>
+    <string name="linktosite"> Here's a great Chill spotify playlist to help you relax. Sit back, relax, and enjoy some smooth lo-fi hip hop tunes. <a href="https://open.spotify.com/user/chillhopmusic/playlist/74sUjcvpGfdOvCHvgzNEDO?si=CjZ-lvDxRJeVbFFYzCaikw">Check it out here!</a></string>
 </resources>

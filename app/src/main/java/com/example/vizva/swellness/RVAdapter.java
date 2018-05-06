@@ -71,12 +71,20 @@ public class RVAdapter extends RecyclerView.Adapter<RVAdapter.SuggestionViewHold
         suggestionViewHolder.cv.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(context, SuggestionActivity.class);
-                //The activity_suggestions page has a textview and image view
-                intent.putExtra("image",suggestions.get(i).photoId);
-                intent.putExtra("title", suggestions.get(i).title);
+                if(suggestions.get(i).title.equals("Here's a Chill playlist")){
+                    Intent intent = new Intent(context, PlaylistActivity.class);
 
-                context.startActivity(intent);
+                    context.startActivity(intent);
+                }
+                else{
+                    Intent intent = new Intent(context, SuggestionActivity.class);
+                    //The activity_suggestions page has a textview and image view
+                    intent.putExtra("image",suggestions.get(i).photoId);
+                    intent.putExtra("title", suggestions.get(i).title);
+
+                    context.startActivity(intent);
+                }
+
             }
         });
         suggestionViewHolder.vCheckbox.setOnClickListener(new View.OnClickListener(){
