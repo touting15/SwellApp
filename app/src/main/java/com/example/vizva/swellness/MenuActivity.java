@@ -86,11 +86,8 @@ public class MenuActivity extends AppCompatActivity {
     }
 
     @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        switch (item.getItemId()){
-            case android.R.id.home:
-                NavUtils.navigateUpFromSameTask(this);
-        }
-        return super.onOptionsItemSelected(item);
+    public boolean onSupportNavigateUp(){
+        finish();
+        return true;
     }
 }

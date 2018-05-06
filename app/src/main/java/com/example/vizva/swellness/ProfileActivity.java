@@ -14,4 +14,6 @@ public class ProfileActivity extends AppCompatActivity {
         TextView menuPageTextView = (TextView) findViewById(R.id.profTextView);
         menuPageTextView.setText("You are on the profile page which is under construction");
     }
+
+
 }
