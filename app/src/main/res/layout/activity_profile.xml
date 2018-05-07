@@ -6,19 +6,142 @@
     android:layout_height="match_parent"
     tools:context="com.example.vizva.swellness.ProfileActivity">
 
-    <TextView
-        android:id="@+id/profTextView"
+
+    <ImageView
+        android:id="@+id/blue_background"
+        android:layout_width="match_parent"
+        android:layout_height="110dp"
+        android:src="@color/background_blue"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="0dp" />
+
+    <ImageView
+        android:id="@+id/sample_img"
+        android:layout_width="118dp"
+        android:layout_height="106dp"
+        app:srcCompat="@drawable/profile_sample"
+        tools:layout_editor_absoluteX="133dp"
+        tools:layout_editor_absoluteY="53dp" />
+
+    <EditText
+        android:id="@+id/name_title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginLeft="8dp"
-        android:layout_marginRight="8dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="Jane Doe"
+        tools:layout_editor_absoluteX="85dp"
+        tools:layout_editor_absoluteY="0dp" />
+
+    <TextView
+        android:id="@+id/task_completed"
+        android:layout_width="105dp"
+        android:layout_height="25dp"
+        android:text="Task Completed"
+        tools:layout_editor_absoluteX="140dp"
+        tools:layout_editor_absoluteY="170dp" />
+
+    <!-- Icons -->
+
+    <ImageView
+        android:id="@+id/fitness_icon"
+        android:layout_width="45dp"
+        android:layout_height="36dp"
+        app:srcCompat="@drawable/ic_fitness"
+        tools:layout_editor_absoluteX="25dp"
+        tools:layout_editor_absoluteY="201dp" />
+
+    <ImageView
+        android:id="@+id/food_icon"
+        android:layout_width="47dp"
+        android:layout_height="40dp"
+        app:srcCompat="@drawable/ic_food"
+        tools:layout_editor_absoluteX="117dp"
+        tools:layout_editor_absoluteY="195dp" />
+
+    <ImageView
+        android:id="@+id/meditation_icon"
+        android:layout_width="51dp"
+        android:layout_height="45dp"
+        app:srcCompat="@drawable/ic_meditation"
+        tools:layout_editor_absoluteX="208dp"
+        tools:layout_editor_absoluteY="195dp" />
+
+    <ImageView
+        android:id="@+id/sleep_icon"
+        android:layout_width="51dp"
+        android:layout_height="43dp"
+        app:srcCompat="@drawable/ic_sleep"
+        tools:layout_editor_absoluteX="300dp"
+        tools:layout_editor_absoluteY="195dp" />
+
+    <ScrollView
+        android:id="@+id/scrollable_task"
+        android:layout_width="367dp"
+        android:layout_height="184dp"
+        tools:layout_editor_absoluteX="8dp"
+        tools:layout_editor_absoluteY="319dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" />
+    </ScrollView>
+
+    <TextView
+        android:id="@+id/fitnes_counter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:text="TextView"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="245dp" />
+
+    <TextView
+        android:id="@+id/food_counter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="TextView"
+        tools:layout_editor_absoluteX="117dp"
+        tools:layout_editor_absoluteY="245dp" />
+
+    <TextView
+        android:id="@+id/meditation_counter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="TextView"
+        tools:layout_editor_absoluteX="208dp"
+        tools:layout_editor_absoluteY="245dp" />
+
+    <TextView
+        android:id="@+id/sleep_counter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="TextView"
+        tools:layout_editor_absoluteX="300dp"
+        tools:layout_editor_absoluteY="245dp" />
+
+    <TextView
+        android:id="@+id/task_history"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Task History"
+        tools:layout_editor_absoluteX="153dp"
+        tools:layout_editor_absoluteY="281dp" />
+
+
+    <!--<TextView-->
+        <!--android:id="@+id/profTextView"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_marginBottom="8dp"-->
+        <!--android:layout_marginEnd="8dp"-->
+        <!--android:layout_marginLeft="8dp"-->
+        <!--android:layout_marginRight="8dp"-->
+        <!--android:layout_marginStart="8dp"-->
+        <!--android:layout_marginTop="8dp"-->
+        <!--android:text="TextView"-->
+        <!--app:layout_constraintBottom_toBottomOf="parent"-->
+        <!--app:layout_constraintEnd_toEndOf="parent"-->
+        <!--app:layout_constraintStart_toStartOf="parent"-->
+        <!--app:layout_constraintTop_toTopOf="parent" />-->
 </android.support.constraint.ConstraintLayout>
