@@ -12,6 +12,8 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 import android.widget.Button;
+import android.app.AlertDialog;
+import android.content.DialogInterface;
 
 import java.util.List;
 
@@ -25,7 +27,7 @@ public class RVAdapter extends RecyclerView.Adapter<RVAdapter.SuggestionViewHold
         TextView vTitle;
         TextView vSubtitle;
         TextView vXp;
-        Button vCompleted;
+        Button vCompleted, vRemove;
 
         public SuggestionViewHolder(View v) {
             super(v);
@@ -37,6 +39,7 @@ public class RVAdapter extends RecyclerView.Adapter<RVAdapter.SuggestionViewHold
             vSubtitle = (TextView) v.findViewById(R.id.textView2);
             vXp = (TextView) v.findViewById(R.id.xp);
             vCompleted = (Button) v.findViewById(R.id.completed);
+            vRemove = (Button) v.findViewById(R.id.remove);
         }
     }
 
@@ -90,9 +93,41 @@ public class RVAdapter extends RecyclerView.Adapter<RVAdapter.SuggestionViewHold
         suggestionViewHolder.vCompleted.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View view){
-                    //add toast to say completed
-                Toast.makeText(context,"Activity Completed", Toast.LENGTH_SHORT).show();
-                    //remove from list
+
+                AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(
+                        context);
+                //Title
+                alertDialogBuilder.setTitle("Hooray!");
+                //dialogue message
+                alertDialogBuilder
+                        .setMessage("Did you finish this activity?")
+                        .setCancelable(false)
+                        .setPositiveButton("Yes",new DialogInterface.OnClickListener() {
+                            public void onClick(DialogInterface dialog,int id) {
+                                // if this button is clicked, toast message and remove from list
+                                Toast.makeText(context,"You're awesome! Keep it up!", Toast.LENGTH_SHORT).show();
+                                removeItem(i);
+                            }
+                        })
+                        .setNegativeButton("No",new DialogInterface.OnClickListener() {
+                            public void onClick(DialogInterface dialog,int id) {
+                                // if this button is clicked, just close
+                                // the dialog box and do nothing
+                                dialog.cancel();
+                            }
+                        });
+                // create alert dialog
+                AlertDialog alertDialog = alertDialogBuilder.create();
+
+                // show it
+                alertDialog.show();
+
+            }
+        });
+        suggestionViewHolder.vRemove.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View view){
+                //remove from list
                 removeItem(i);
 
             }

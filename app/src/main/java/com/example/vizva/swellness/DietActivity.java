@@ -5,23 +5,36 @@ import android.support.annotation.NonNull;
 import android.support.design.widget.BottomNavigationView;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.RecyclerView;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.ImageView;
 import android.widget.TextView;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class DietActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_diet);
-//simple text
-        TextView textView = (TextView) findViewById(R.id.diet_title);
-        textView.setText("Diet Page");
-//input screenshot of diet page
-       ImageView imageView = (ImageView) findViewById(R.id.diet_image);
-        imageView.setImageResource(R.drawable.ic_swellness);
+        setContentView(R.layout.activity_mainpage);
+        RecyclerView recyclerView = (RecyclerView) findViewById(R.id.rv);
+        LinearLayoutManager llm = new LinearLayoutManager(this);
+        recyclerView.setLayoutManager(llm);
+
+        List<Suggestion> suggestions = new ArrayList<>();
+        suggestions.add(new Suggestion("Get energized with some protein!", "Have some protein-packed snacks.", R.drawable.shoes, "10"));
+        suggestions.add(new Suggestion("Stay Hydrated", "It's easy to forget to drink enough water", R.drawable.waterbottle, "2"));
+        suggestions.add(new Suggestion("Farmer's Market Today", "There will be some yummy local food", R.drawable.upcoming_event, "5"));
+        suggestions.add(new Suggestion("An apple a day keeps the doctor away", "Some insipration", R.drawable.basketball, "You do you"));
+        suggestions.add(new Suggestion("Swap in some healthy foods", "Fruit for dessert", R.drawable.play, "2"));
+        suggestions.add(new Suggestion("Under the weather?", "Try some vitamin C", R.drawable.snooze, "5"));
+
+        RVAdapter adapter = new RVAdapter(this, suggestions);
+        recyclerView.setAdapter(adapter);
 
         BottomNavigationView bottomNavigationView = (BottomNavigationView) findViewById(R.id.bottom_navigation);
         BottomNavigationViewHelper.disableShiftMode(bottomNavigationView);

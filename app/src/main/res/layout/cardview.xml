@@ -18,6 +18,16 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
+            <Button
+                android:id="@+id/remove"
+                android:layout_width="wrap_content"
+                android:layout_height="28dp"
+                android:layout_alignBottom="@+id/imageView"
+                android:layout_toStartOf="@+id/completed"
+                android:background="@drawable/register_button"
+                android:text="No Thanks"
+                android:textColor="@color/white" />
+
             <ImageView
                 android:id="@+id/imageView"
                 android:layout_width="100dp"
@@ -70,7 +80,7 @@
                 android:layout_alignBottom="@+id/imageView"
                 android:layout_alignParentEnd="true"
                 android:background="@drawable/register_button"
-                android:text="Completed"
+                android:text="Completed!"
                 android:textColor="@color/white" />
 
         </RelativeLayout>

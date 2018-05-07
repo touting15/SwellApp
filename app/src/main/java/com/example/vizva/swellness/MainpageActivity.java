@@ -25,7 +25,7 @@ public class MainpageActivity extends AppCompatActivity {
         RecyclerView recyclerView = (RecyclerView) findViewById(R.id.rv);
         LinearLayoutManager llm = new LinearLayoutManager(this);
         recyclerView.setLayoutManager(llm);
-//Creates the suggestions to be made into cards.  Change the dumbbell images
+//Creates the suggestions to be made into cards.
         List<Suggestion> suggestions = new ArrayList<>();
         suggestions.add(new Suggestion("It's Beautiful... Let's Go For a Run", "Learn more about the benefits of cardio", R.drawable.sun, "10"));
         suggestions.add(new Suggestion("Stay Hydrated", "It's easy to forget to drink enough water", R.drawable.waterbottle, "2"));
