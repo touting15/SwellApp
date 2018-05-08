@@ -9,6 +9,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+
         <activity android:name=".SplashActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -16,30 +17,72 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".MainActivity" />
 
-        <activity android:name=".MainpageActivity"></activity>
+        <activity android:name=".MainActivity" />
+        <activity android:name=".MainpageActivity" />
         <activity android:name=".FitnessActivity" />
         <activity android:name=".DietActivity" />
         <activity android:name=".SleepActivity" />
         <activity android:name=".MeditationActivity" />
         <activity android:name=".SuggestionActivity" />
-        <activity android:name=".PlaylistActivity" />
+
+        <activity
+            android:name=".PlaylistActivity"
+            android:parentActivityName=".SuggestionActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".SuggestionActivity" />
+        </activity>
+
         <activity
             android:name=".MenuActivity"
-            android:label="Swellness Menu"
+            android:label="\u0009\u0009\u0009\u0009Swellness Menu"
             android:parentActivityName=".MainpageActivity">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".MainpageActivity" />
         </activity>
+
         <activity
             android:name=".ProfileActivity"
-            android:label="Swellness Profile" />
-        <activity android:name=".FavoritesActivity" />
-        <activity android:name=".SettingActivity" />
-        <activity android:name=".HelpActivity" />
-        <activity android:name=".ContactActivity"></activity>
+            android:parentActivityName=".MenuActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".MenuActivity" />
+        </activity>
+
+        <activity
+            android:name=".FavoritesActivity"
+            android:parentActivityName=".MenuActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".MenuActivity" />
+        </activity>
+
+        <activity
+            android:name=".SettingActivity"
+            android:parentActivityName=".MenuActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".MenuActivity" />
+        </activity>
+
+        <activity
+            android:name=".HelpActivity"
+            android:parentActivityName=".MenuActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".MenuActivity" />
+        </activity>
+
+        <activity
+            android:name=".ContactActivity"
+            android:parentActivityName=".MenuActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".MenuActivity" />
+        </activity>
+
     </application>
 
 </manifest>

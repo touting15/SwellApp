@@ -1,5 +1,6 @@
 package com.example.vizva.swellness;
 
+import android.content.Context;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -7,12 +8,14 @@ import android.view.View;
 import android.widget.AutoCompleteTextView;
 import android.widget.Button;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
     protected AutoCompleteTextView userTextView;
     protected AutoCompleteTextView passwordTextView;
     protected Button loginBut;
+    Context context = this;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,6 +39,8 @@ public class MainActivity extends AppCompatActivity {
         if((username.equals("cmsc434")) && (password.equals("test"))) {
             Intent intent = new Intent(MainActivity.this, MainpageActivity.class);
             startActivity(intent);
+        } else {
+            Toast.makeText(context,"Incorrect username/password", Toast.LENGTH_SHORT).show();
         }
 
     }

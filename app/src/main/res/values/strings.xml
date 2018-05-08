@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Swellness</string>
+    <string name="app_name">\u0009\u0009\u0009\u0009\u0009\u0009Swellness</string>
     <!--For menu botton on action bar-->
     <string name="menu_title">Menu</string>
     <!--For the bottom navigation bar-->
@@ -8,5 +8,5 @@
     <string name="menu_meditation">Meditation</string>
     <string name="menu_diet">Diet</string>
     <string name="menu_sleep">Sleep</string>
-    <string name="linktosite"> Here's a great Chill spotify playlist to help you relax. Sit back, relax, and enjoy some smooth lo-fi hip hop tunes. <a href="https://open.spotify.com/user/chillhopmusic/playlist/74sUjcvpGfdOvCHvgzNEDO?si=CjZ-lvDxRJeVbFFYzCaikw">Check it out here!</a></string>
+    <string name="linktosite"> Here\'s a great Chill spotify playlist to help you relax. Sit back, relax, and enjoy some smooth lo-fi hip hop tunes. <a href="https://open.spotify.com/user/chillhopmusic/playlist/74sUjcvpGfdOvCHvgzNEDO?si=CjZ-lvDxRJeVbFFYzCaikw">Check it out here!</a></string>
 </resources>
