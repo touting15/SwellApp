@@ -13,6 +13,7 @@
         android:layout_height="110dp"
         android:src="@color/background_blue"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -20,48 +21,29 @@
         android:id="@+id/sample_img"
         android:layout_width="108dp"
         android:layout_height="0dp"
-        android:layout_marginBottom="17dp"
-        android:layout_marginEnd="59dp"
-        android:layout_marginLeft="59dp"
-        android:layout_marginRight="59dp"
-        android:layout_marginStart="59dp"
-        android:layout_marginTop="7dp"
-        app:layout_constraintBottom_toTopOf="@+id/task_completed"
-        app:layout_constraintEnd_toEndOf="@+id/name_title"
+        android:layout_marginLeft="84dp"
+        android:layout_marginStart="84dp"
         app:layout_constraintStart_toEndOf="@+id/fitnes_counter"
-        app:layout_constraintTop_toBottomOf="@+id/name_title"
-        app:srcCompat="@drawable/profile_sample" />
+        app:srcCompat="@drawable/profile_sample"
+        tools:layout_editor_absoluteY="0dp" />
 
-
-    <EditText
-        android:id="@+id/name_title"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:text="Jane Doe"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/blue_background" />
 
     <TextView
         android:id="@+id/task_completed"
         android:layout_width="105dp"
         android:layout_height="25dp"
         android:layout_marginBottom="124dp"
-        android:layout_marginTop="124dp"
         android:text="Task Completed"
         app:layout_constraintBottom_toTopOf="@+id/scrollable_task"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/name_title" />
+        app:layout_constraintStart_toStartOf="parent" />
 
     <!-- Icons -->
 
     <ImageView
         android:id="@+id/fitness_icon"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
+        android:layout_width="35dp"
+        android:layout_height="39dp"
         android:layout_marginBottom="8dp"
         android:layout_marginEnd="4dp"
         android:layout_marginLeft="4dp"
@@ -70,8 +52,10 @@
         android:layout_marginTop="6dp"
         app:layout_constraintBottom_toTopOf="@+id/fitnes_counter"
         app:layout_constraintEnd_toEndOf="@+id/fitnes_counter"
+        app:layout_constraintHorizontal_bias="0.518"
         app:layout_constraintStart_toStartOf="@+id/fitnes_counter"
         app:layout_constraintTop_toTopOf="@+id/food_icon"
+        app:layout_constraintVertical_bias="1.0"
         app:srcCompat="@drawable/ic_fitness" />
 
     <ImageView
@@ -88,8 +72,8 @@
 
     <ImageView
         android:id="@+id/meditation_icon"
-        android:layout_width="51dp"
-        android:layout_height="45dp"
+        android:layout_width="46dp"
+        android:layout_height="41dp"
         android:layout_marginBottom="24dp"
         android:layout_marginEnd="92dp"
         android:layout_marginLeft="91dp"
@@ -100,12 +84,13 @@
         app:layout_constraintEnd_toEndOf="@+id/sleep_icon"
         app:layout_constraintStart_toStartOf="@+id/food_counter"
         app:layout_constraintTop_toTopOf="@+id/task_completed"
+        app:layout_constraintVertical_bias="0.0"
         app:srcCompat="@drawable/ic_meditation" />
 
     <ImageView
         android:id="@+id/sleep_icon"
-        android:layout_width="51dp"
-        android:layout_height="43dp"
+        android:layout_width="41dp"
+        android:layout_height="40dp"
         android:layout_marginBottom="26dp"
         android:layout_marginEnd="33dp"
         android:layout_marginLeft="34dp"
@@ -114,8 +99,10 @@
         android:layout_marginTop="25dp"
         app:layout_constraintBottom_toBottomOf="@+id/sleep_counter"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toEndOf="@+id/meditation_counter"
         app:layout_constraintTop_toTopOf="@+id/task_completed"
+        app:layout_constraintVertical_bias="0.0"
         app:srcCompat="@drawable/ic_sleep" />
 
     <ScrollView
@@ -143,41 +130,41 @@
         android:id="@+id/fitnes_counter"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="16dp"
-        android:layout_marginStart="16dp"
-        android:text="TextView"
+        android:layout_marginLeft="36dp"
+        android:layout_marginStart="36dp"
+        android:text="30"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="@android:" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/food_counter"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="TextView"
+        android:layout_marginLeft="16dp"
+        android:layout_marginStart="16dp"
+        android:text="35"
         app:layout_constraintStart_toStartOf="@+id/food_icon"
         app:layout_constraintTop_toTopOf="@+id/fitnes_counter" />
 
     <TextView
         android:id="@+id/meditation_counter"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="17dp"
-        android:layout_marginEnd="34dp"
-        android:layout_marginLeft="33dp"
-        android:layout_marginRight="34dp"
-        android:layout_marginStart="33dp"
-        android:text="TextView"
+        android:layout_width="20dp"
+        android:layout_height="18dp"
+        android:layout_marginBottom="16dp"
+        android:layout_marginLeft="84dp"
+        android:layout_marginStart="84dp"
+        android:text="20"
         app:layout_constraintBottom_toTopOf="@+id/task_history"
-        app:layout_constraintEnd_toEndOf="@+id/name_title"
         app:layout_constraintStart_toEndOf="@+id/food_counter" />
 
     <TextView
         android:id="@+id/sleep_counter"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="TextView"
+        android:layout_width="17dp"
+        android:layout_height="20dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginStart="16dp"
+        android:text="15"
         app:layout_constraintStart_toStartOf="@+id/sleep_icon"
         app:layout_constraintTop_toTopOf="@+id/meditation_counter" />
 
@@ -191,5 +178,15 @@
         android:text="Task History"
         app:layout_constraintEnd_toEndOf="@+id/meditation_counter"
         app:layout_constraintTop_toBottomOf="@+id/food_counter" />
-    
+
+    <TextView
+        android:id="@+id/jane_doe_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Jane Doe"
+        android:textSize="25dp"
+        android:textStyle="bold"
+        tools:layout_editor_absoluteX="138dp"
+        tools:layout_editor_absoluteY="16dp" />
+
 </android.support.constraint.ConstraintLayout>
